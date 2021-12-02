@@ -1,0 +1,28 @@
+body{color: aqua;
+    background-color:black;
+}
+
+h2{
+    color: red;
+}
+/*selector descendente*/
+article h4{
+    color: green;
+}
+/*selector avanzado, aunque da mismo resultado que el descendente comentado abajo*/
+article > ul{
+    color:gray
+}
+/*
+article ul{
+    color: grey;
+}
+*/
+
+.paraAmarillo{
+    color: yellow;
+}
+
+#paraNaranja{
+    color: orange;
+}
