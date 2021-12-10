@@ -8,7 +8,58 @@
 </head>
 <body>
     <script language="javascript" type="text/javascript">
-        
+        let arreglo = [10, 11, 3, 20, 5];
+            //BUSQUEDAS
+            //Obtener TODOS los elementos del arreglo que cumplen una condición específica. 
+            let mayorQueDiez = arreglo.filter(element => element > 10);
+            console.log(mayorQueDiez) 
+
+            //Obtener al menos UNO de los elementos
+            let existeElementoMayorQueDiez = arreglo.find(element => element > 10);
+            console.log(existeElementoMayorQueDiez)
+
+            //Determina si un arreglo incluye un valor específico y devuelve verdadero o falso
+            let incluyeVeinte = arreglo.includes(20);
+            console.log(incluyeVeinte)
+
+            //Devuelve el primer índice encontrado de un elemento específico. Devuelve -1 si el elemento no existe en el arreglo
+            let indiceDeTres = arreglo.indexOf(3);
+            console.log(indiceDeTres)
+
+            //el apply para que admita el arreglo
+            console.log(Math.max.apply(null,arreglo));
+            console.log(Math.min.apply(null,arreglo));
+
+            console.log(sequentialSearch(10,arreglo));
+
+            function sequentialSearch(element, array) {
+                    //la i hace referencia a posicion
+                    for (var i in array) {
+                      
+                        if (array[i] == element) return i;
+
+                    }
+                    return -1;
+
+                }
+                
+            var letters = ["a", "b", "c", "d", "f", "g", "h", "i", "j", "k", "l", "m", "n"];
+            console.log(sequentialSearch("g", letters));
+            //ORDENAMIENTO
+            const equipos = ['Real Madrid', 'Manchester Utd', 'Bayern Munich', 'Juventus'];
+                equipos.sort(); 
+                console.log(equipos);
+            //En numeros se llama a la funcion compareFunction que aparece en detalle al abrir el parentesis y se lo deja como function(a,b)...
+            var numbers = [4, 2, 5, 1, 3];
+
+                numbers.sort(function (a, b) {
+                    return a - b;
+                })
+            console.log(numbers);
+            //Descendente
+            numbers.sort(function(a, b){return b - a}); 
+            console.log(numbers);
+
     </script>
 </body>
 </html>
