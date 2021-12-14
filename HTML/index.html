@@ -11,18 +11,24 @@
     //D.O.M.
     function MostrarTexto(){                
                 const elemento = document.getElementById("intro"); //guardo todo el elemento del id Intro
-                const element2 = document.getElementById("intro2");
+                const texto = document.getElementById("txt");
                 console.log(elemento.value);//solo muestro el valor
 
                 elemento.innerHTML= "Paragraph changed!";
-                //elemento.innerHTML =  new html;
-                console.log(elemento);
-            }        
+                console.log(elemento);                
+                console.log(texto.innerHTML);
+            }
+
+            var tag = document.createElement("p");
+            var text = document.createTextNode("Tutorix is the best e-learning platform");
+            tag.appendChild(text);
+            var element = document.getElementById("new");
+            element.appendChild(tag);
     </script>
 
     <input type="text" id="intro">
     <br>
-    <input type="text" id="intro2">
+    <input type="text" id="intro2" value="asd">
     <br>
     <input type="button" value="Hace click" onclick="MostrarTexto()">
 
@@ -30,5 +36,9 @@
         <p>primer parrafo hijo de div id="txt"</p>
         <p>segundo parrafo hijo de id="txt" txt</p>
       </div>
+
+      <div id="new">
+        <p id="p1">Tutorix</p>
+        <p id="p2">Tutorialspoint</p>
 </body>
 </html>
