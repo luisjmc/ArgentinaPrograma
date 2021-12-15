@@ -7,24 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <script language="javascript" type="text/javascript">
-    //D.O.M.
-    function MostrarTexto(){                
-                const elemento = document.getElementById("intro"); //guardo todo el elemento del id Intro
-                const texto = document.getElementById("txt");
-                console.log(elemento.value);//solo muestro el valor
-
-                elemento.innerHTML= "Paragraph changed!";
-                console.log(elemento);                
-                console.log(texto.innerHTML);
-            }
-
-            var tag = document.createElement("p");
-            var text = document.createTextNode("Tutorix is the best e-learning platform");
-            tag.appendChild(text);
-            var element = document.getElementById("new");
-            element.appendChild(tag);
-    </script>
+    
 
     <input type="text" id="intro">
     <br>
@@ -40,5 +23,25 @@
       <div id="new">
         <p id="p1">Tutorix</p>
         <p id="p2">Tutorialspoint</p>
+    </div>
+    <script language="javascript" type="text/javascript">
+        //D.O.M.
+        function MostrarTexto(){                
+                    const elemento = document.getElementById("intro"); //guardo todo el elemento del id Intro
+                    const texto = document.getElementById("txt");
+                    console.log(elemento.value);//solo muestro el valor
+    
+                    elemento.innerHTML= "Paragraph changed!";
+                    console.log(elemento);                
+                    console.log(texto.innerHTML);
+                }
+    
+                var tag = document.createElement("p");
+                var text = document.createTextNode("Tutorix is the best e-learning platform");
+                tag.appendChild(text);
+                var element = document.getElementById("new");
+                console.log(element);
+                element.appendChild(tag);
+        </script>
 </body>
 </html>

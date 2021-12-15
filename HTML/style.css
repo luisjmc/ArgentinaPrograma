@@ -1,0 +1,13 @@
+*{
+    color: violet;
+    cursor: pointer;
+}
+p{
+    color: grey;
+    cursor: pointer;
+}
+
+/*selector de clase*/
+.mi-clase{
+    color: green;
+}
