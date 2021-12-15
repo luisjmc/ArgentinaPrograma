@@ -7,38 +7,26 @@
     <title>Document</title>
 </head>
 <body>
+    
     <script language="javascript" type="text/javascript">
-    //D.O.M.
-    function MostrarTexto(){                
-                const elemento = document.getElementById("intro"); //guardo todo el elemento del id Intro
-                const texto = document.getElementById("txt");
-                console.log(elemento.value);//solo muestro el valor
 
-                elemento.innerHTML= "Paragraph changed!";
-                console.log(elemento);                
-                console.log(texto.innerHTML);
-            }
+    var JSONObj = { "nombrelibro":"El hacedor", "precio":500 };	
+    var libros =new Object();
+    libros = {
+            "Libros": [
+                {
+                    "nombrelibro": "El hacedor",
+                    "precio": 500
+                },
+                {
+                    "nombrelibro": "El libro gordo de petete",
+                    "precio": 600
+                }
+            ]
+        }
 
-            var tag = document.createElement("p");
-            var text = document.createTextNode("Tutorix is the best e-learning platform");
-            tag.appendChild(text);
-            var element = document.getElementById("new");
-            element.appendChild(tag);
+    console.log(JSON.stringify(JSONObj));
+    console.log(JSON.stringify(libros));
     </script>
-
-    <input type="text" id="intro">
-    <br>
-    <input type="text" id="intro2" value="asd">
-    <br>
-    <input type="button" value="Hace click" onclick="MostrarTexto()">
-
-    <div id="txt">
-        <p>primer parrafo hijo de div id="txt"</p>
-        <p>segundo parrafo hijo de id="txt" txt</p>
-      </div>
-
-      <div id="new">
-        <p id="p1">Tutorix</p>
-        <p id="p2">Tutorialspoint</p>
 </body>
 </html>
