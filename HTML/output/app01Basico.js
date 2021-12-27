@@ -31,13 +31,8 @@ console.log(obj.c);
 var bnu = [1, 2, 3, 4, 5];
 var [x, y, ...rest] = bnu;
 console.log(rest);
-//paso la cantidad de parametros que quiera sacando los 2 primeros en este caso
+//pruebaEstructural()
 function pruebaEstructural(a, b, ...manyMoreArgs) {
     console.log(manyMoreArgs);
 }
 pruebaEstructural('1', '2', '3', '4', '5');
-
-//Casteo en javascript
-var nombre = "Luis";
-(nombre as String).toUpperCase();
-//(<string>nombre).toUpperCase();
