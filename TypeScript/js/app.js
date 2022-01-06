@@ -1,37 +1,53 @@
 "use strict";
-class Operacion {
-    constructor() {
-        this.valorA = 0;
-        this.valorB = 0;
-        this.resultado = 0;
+//===================================
+class Turbina {
+    constructor(n) {
+        this.numTurbinas = 0;
+        this.numTurbinas = n;
     }
-    set ValorA(v) {
-        this.valorA = v;
-    }
-    set ValorB(v) {
-        this.valorB = v;
-    }
-    get Resultado() {
-        return this.resultado;
+    ToString() {
+        return this.numTurbinas + " Turbinas/s";
     }
 }
-class suma extends Operacion {
-    Sumar() {
-        this.resultado = this.valorA + this.valorB;
+class Cubierta {
+    constructor(pCabinaTripulacion, pCabinaVuelo, pSistemaEmergencia, pTanquesCombustible, pPuertasSalida) {
+        this.cabinaTripulacion = false;
+        this.cabinaVuelo = false;
+        this.sistemaEmergencia = false;
+        this.numTanquesCombustible = 0;
+        this.numPuertasSalidas = 0;
+        this.cabinaTripulacion = pCabinaTripulacion;
+        this.cabinaVuelo = pCabinaVuelo;
+        this.sistemaEmergencia = pSistemaEmergencia;
+        this.numTanquesCombustible = pTanquesCombustible;
+        this.numPuertasSalidas = pPuertasSalida;
+    }
+    ToString() {
+        let mensaje = "cubierta compuesta de: ";
+        if (this.cabinaVuelo) {
+            mensaje += " Cubierta de Vuelo";
+        }
+        if (this.cabinaTripulacion) {
+            mensaje += " Cubierta de Tripulacion";
+        }
+        if (this.sistemaEmergencia) {
+            mensaje += " Sistema de Emergencia";
+        }
+        mensaje += this.numTanquesCombustible + "Tanques de Combustible, ";
+        mensaje += this.numPuertasSalidas + " Puertas de Salida.";
+        return mensaje;
     }
 }
-class restar extends Operacion {
-    Restar() {
-        this.resultado = this.valorA - this.valorB;
+const persona = {
+    nombre: 'Mario',
+    edad: 30,
+    direccion: {
+        calle: 'San Martin',
+        pais: 'Argentina',
+        ciudad: 'Córdoba'
+    },
+    mostrarDireccion() {
+        return this.nombre + ',' + this.direccion.ciudad + ',' + this.direccion.pais;
     }
-}
-let operacionS = new suma();
-operacionS.ValorA = 45;
-operacionS.ValorB = 10;
-operacionS.Sumar();
-console.log("el resultado de la suma es " + operacionS.Resultado);
-let operacionR = new restar();
-operacionR.ValorA = 45;
-operacionR.ValorB = 10;
-operacionR.Restar();
-console.log("el resultado de la resta es " + operacionR.Resultado);
+};
+console.log(persona.mostrarDireccion());

@@ -1,3 +1,16 @@
+interface IPersona{
+    nombre:string;
+    edad:number;
+    direccion:IDireccion,
+    mostrarDireccion():string;
+}
+
+interface IDireccion{
+    calle:string;
+    pais:string;
+    ciudad:string;
+}
+//===================================
 class Turbina {
     private numTurbinas:number=0;
     constructor(n:number) {
@@ -40,3 +53,18 @@ class Cubierta {
         return mensaje;
     }
 }
+
+const persona:IPersona={
+    nombre: 'Mario',
+    edad:30,
+    direccion:{
+        calle: 'San Martin',
+        pais:'Argentina',
+        ciudad:'Córdoba'
+    },
+    mostrarDireccion(){
+        return this.nombre+','+this.direccion.ciudad+','+this.direccion.pais;
+    }
+}
+
+console.log(persona.mostrarDireccion());
